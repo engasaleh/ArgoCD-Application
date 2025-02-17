@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: saleh-greeting-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: saleh-greeting
+  template:
+    metadata:
+      labels:
+        app: saleh-greeting
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        volumeMounts:
+        - name: greeting-volume
+          mountPath: /usr/share/nginx/html/index.html
+          subPath: index.html
+      volumes:
+      - name: greeting-volume
+        configMap:
+          name: saleh-greeting-configmap
