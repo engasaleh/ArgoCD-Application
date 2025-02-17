@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: saleh-greeting-service
+spec:
+  selector:
+    app: saleh-greeting
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 30001  # You can change the port to a different valid port
+  type: NodePort
