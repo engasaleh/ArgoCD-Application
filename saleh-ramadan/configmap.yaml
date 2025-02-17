@@ -1,0 +1,96 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: saleh-greeting-configmap
+data:
+  index.html: |
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ramadan Greeting Page</title>
+        <style>
+            body {
+                font-family: 'Arial', sans-serif;
+                text-align: center;
+                padding: 50px;
+                background-color: #f4f4f9;
+                background-image: url('https://www.transparenttextures.com/patterns/wood-pattern.png');
+            }
+
+            .greeting {
+                font-size: 40px;
+                color: #4CAF50;
+                font-weight: bold;
+                margin-top: 50px;
+                padding: 10px;
+                background-color: rgba(255, 255, 255, 0.8);
+                border-radius: 10px;
+                box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            }
+
+            .message {
+                font-size: 28px;
+                color: #555;
+                margin-top: 20px;
+            }
+
+            .ramadan-decor {
+                margin-top: 30px;
+                font-size: 100px;
+                color: #ffcc00;
+                animation: glow 1.5s ease-in-out infinite alternate;
+            }
+
+            .moon-icon {
+                color: #f1c40f;
+                font-size: 100px;
+            }
+
+            .lantern-icon {
+                color: #e74c3c;
+                font-size: 120px;
+            }
+
+            @keyframes glow {
+                0% {
+                    text-shadow: 0 0 10px #f1c40f, 0 0 20px #f1c40f, 0 0 30px #f1c40f;
+                }
+                100% {
+                    text-shadow: 0 0 20px #f1c40f, 0 0 30px #f1c40f, 0 0 40px #f1c40f;
+                }
+            }
+
+            .footer {
+                font-size: 18px;
+                margin-top: 50px;
+                color: #aaa;
+            }
+
+            .ramadan-decor span {
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <!-- Ramadan Themed Greeting -->
+        <div class="greeting">
+            <div>Hello Saleh...</div>
+            <div class="message">Ramadan Kareem!</div>
+        </div>
+
+        <!-- Decor Elements -->
+        <div class="ramadan-decor">
+            <span class="moon-icon">&#127774;</span>
+            <span class="lantern-icon">&#127876;</span>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            May this Ramadan bring peace and blessings to you and your family!
+        </div>
+
+    </body>
+    </html>
